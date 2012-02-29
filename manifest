@@ -1,8 +1,8 @@
-#appname: Persistence
-#publisher: kevin
-#url: appcelerator.com
-#image: appicon.png
-#appid: com.appcelerator.persistence
-#desc: undefined
-#type: mobile
-#guid: ef78a2da-817a-47ba-8b32-3a21a3745224
+#appname:Persistence
+#publisher:not specified
+#url:http://
+#image:appicon.png
+#appid:com.jamilhassanspain.persistence
+#desc:not specified
+#type:mobile
+#guid:ef78a2da-817a-47ba-8b32-3a21a3745224

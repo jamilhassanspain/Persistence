@@ -10,8 +10,20 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>appicon.png</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.jamilhassanspain.persistence</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>persistence</string>
+				
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.appcelerator.persistence</string>
+	<string>com.jamilhassanspain.persistence</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -22,10 +34,26 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMainNibFile</key>
-	<string>MainWindow</string>
+        <key>CFBundleIconFiles</key>
+        <array>
+	<string>appicon.png</string>
+</array>
+
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+	<string>UIInterfaceOrientationPortrait</string>
+	<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	<string>UIInterfaceOrientationLandscapeLeft</string>
+	<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+        <key>UISupportedInterfaceOrientations</key>
+        <array>
+	<string>UIInterfaceOrientationPortrait</string>
+	</array>
         <key>UIStatusBarStyle</key>
         <string>UIStatusBarStyleDefault</string>
 </dict>

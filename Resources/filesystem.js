@@ -1,8 +1,14 @@
 var win = Titanium.UI.currentWindow;
 win.layout = 'vertical';
 
+var f = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, 'test.json');
 // PLEASE NOTE - resourcesDirectory is read-only on the device - use applicationDataDirectory for writes
-var f = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, 'test.json');
+Ti.API.debug(f.exists());  
+if( !f.exists() ){
+	// Data file does not exists in App Dir, use Resources Dir
+	var f = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, 'test.json');
+}  
+ 
 var resources = JSON.parse(f.read().text);
 
 var tf1 = Titanium.UI.createTextField({
@@ -44,7 +50,11 @@ var b1 = Titanium.UI.createButton({
 	top:10
 });
 b1.addEventListener("click", function(e) {
+	
   // WARNING - resourcesDirectory is not writeable on the device - use applicationDataDirectory instead
-  f.write(JSON.stringify(resources));
+var saveLocation = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, 'test.json');
+saveLocation.write(JSON.stringify(resources));
+ 
+
 });
 win.add(b1);
